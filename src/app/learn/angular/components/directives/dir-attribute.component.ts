@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'dir-attribute',
   template: `<h3 class="text-success">Attribute Directives</h3>
-    <h4 class="text-success">[style]</h4>
+    <h4 class="text-success">[ngStyle]</h4>
 
     <p
       [ngStyle]="
@@ -15,7 +15,11 @@ import { Component } from '@angular/core';
     >
       {{ day }}
     </p>
-    <button (click)="setDay()">Click</button>`,
+    <button (click)="setDay()">Click</button>
+
+    <h4 class="text-success">[ngClass]</h4>
+    <p [ngClass]="{ online: classDirective % 2 === 0 }">Dynamic Class Set</p>
+    <button (click)="setClass()">Click</button> `,
   styles: [
     '.online {color: green; font-weight: bold}',
     '.offline {color: grey; font-weight: bold}',
@@ -25,6 +29,7 @@ export class AttributeDirectivesComponent {
   day = '';
   currentStyles: Record<string, string> = {};
   randomIdx: number;
+  classDirective = 0;
 
   setDay(): void {
     this.randomIdx = Math.floor(Math.random() * 7);
@@ -56,5 +61,10 @@ export class AttributeDirectivesComponent {
     }
     console.log(this.randomIdx);
     return;
+  }
+
+  setClass() {
+    console.log(this.classDirective);
+    this.classDirective += 1;
   }
 }
