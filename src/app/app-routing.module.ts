@@ -4,7 +4,10 @@ import { AngularModule } from './learn/angular/angular.module';
 import { routes as angularLearnRoutes } from './learn/angular/angular-routing.module';
 import { CommonModule } from '@angular/common';
 
-const routes: Routes = [{ path: 'angular', children: angularLearnRoutes }];
+const routes: Routes = [
+  { path: 'home', redirectTo: '/' },
+  { path: 'angular', children: angularLearnRoutes },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes), AngularModule, CommonModule],

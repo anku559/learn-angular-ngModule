@@ -1,49 +1,72 @@
-<!-- Data Bindings -->
-<div class="dropdown">
-  <button
-    class="btn btn-default dropdown-toggle"
-    type="button"
-    id="dataBindingDropdown"
-    data-toggle="dropdown"
-    aria-haspopup="true"
-    aria-expanded="true"
-  >
-    Data Binding
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dataBindingDropdown">
-    <li>
-      <a routerLink="/angular/db/interpolation"
-        >Interpolation or String Interpolation</a
+<nav class="navbar navbar-default" *ngIf="isRootRoute()">
+  <div class="row">
+    <!-- Data Bindings -->
+    <div class="col-md-2 dropdown">
+      <button
+        class="btn btn-default dropdown-toggle"
+        type="button"
+        id="dataBindingDropdown"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="true"
       >
-    </li>
-    <li><a routerLink="/angular/db/property">Property Binding</a></li>
-    <li><a routerLink="/angular/db/event">Event Binding</a></li>
-    <li><a routerLink="/angular/db/two-way">Two-Way Binding</a></li>
-  </ul>
-</div>
+        Data Binding
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dataBindingDropdown">
+        <li>
+          <a routerLink="/angular/db/interpolation"
+            >Interpolation or String Interpolation</a
+          >
+        </li>
+        <li><a routerLink="/angular/db/property">Property Binding</a></li>
+        <li><a routerLink="/angular/db/event">Event Binding</a></li>
+        <li><a routerLink="/angular/db/two-way">Two-Way Binding</a></li>
+      </ul>
+    </div>
 
-<!-- Directives -->
-<div class="dropdown">
-  <button
-    class="btn btn-default dropdown-toggle"
-    type="button"
-    id="dataBindingDropdown"
-    data-toggle="dropdown"
-    aria-haspopup="true"
-    aria-expanded="true"
-  >
-    Directives
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dataBindingDropdown">
-    <li>
-      <a routerLink="/angular/dir/structural">Structural Directives</a>
-    </li>
-    <li>
-      <a routerLink="/angular/dir/attribute">Attribute Directives</a>
-    </li>
-  </ul>
-</div>
+    <!-- Directives -->
+    <div class="col-md-2 dropdown">
+      <button
+        class="btn btn-default dropdown-toggle"
+        type="button"
+        id="dataBindingDropdown"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="true"
+      >
+        Directives
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dataBindingDropdown">
+        <li>
+          <a routerLink="/angular/dir/structural">Structural Directives</a>
+        </li>
+        <li>
+          <a routerLink="/angular/dir/attribute">Attribute Directives</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="col-md-2">
+      <button>Link 1</button>
+    </div>
+
+    <div class="col-md-2">
+      <button>Link 1</button>
+    </div>
+
+    <div class="col-md-2">
+      <button>Link 1</button>
+    </div>
+
+    <div class="col-md-2">
+      <button>Link 1</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Router Config -->
 <router-outlet></router-outlet>

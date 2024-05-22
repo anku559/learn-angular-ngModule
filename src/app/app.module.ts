@@ -14,6 +14,7 @@ import { WarningAlertComponent } from './components/warning-alert/warning-alert.
 import { AngularModule } from './learn/angular/angular.module';
 import { CommonModule } from '@angular/common';
 import { AttributeDirectivesComponent } from './learn/angular/components/directives/dir-attribute.component';
+import { AppChunksModule } from './app-chunks/app-chunks.module';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AttributeDirectivesComponent } from './learn/angular/components/directi
     FormsModule,
     AppRoutingModule,
     AngularModule,
+    AppChunksModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

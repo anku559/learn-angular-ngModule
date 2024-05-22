@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   username = 'alexdoe1';
 
+  constructor(private router: Router) {}
+
   resetUserName() {
     this.username = '';
+  }
+
+  isRootRoute() {
+    return this.router.url === '/' || this.router.url === '/home';
   }
 }
