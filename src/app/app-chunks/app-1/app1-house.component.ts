@@ -4,12 +4,15 @@ import { Component } from '@angular/core';
   selector: 'app1-house',
   template: `
     <app1-header></app1-header>
-    <app1-recipes></app1-recipes>
-    <app1-recipe-list></app1-recipe-list>
-    <app1-recipe-detail></app1-recipe-detail>
-    <app1-recipe></app1-recipe>
-    <app1-shopping-list></app1-shopping-list>
-    <app1-shopping-edit></app1-shopping-edit>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <app1-recipes></app1-recipes>
+          <app1-shopping-list></app1-shopping-list>
+        </div>
+      </div>
+    </div>
   `,
   styles: [],
 })
